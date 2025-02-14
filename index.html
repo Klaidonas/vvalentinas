@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Love Story</title>
+  <style>
+    /* --- Basic Reset & Body Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fff0f5; /* Light pink background */
+      color: #333;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: #ffd6e7; /* A slightly darker pink for hero section */
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .hero .heart {
+      font-size: 2.5rem;
+      color: #e63946; 
+    }
+
+    /* --- Timeline Container --- */
+    .timeline {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .timeline h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      position: relative;
+    }
+    .timeline h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #e63946;
+      margin: 0.5rem auto;
+    }
+
+    /* --- Timeline Items --- */
+    .timeline-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    /* Dot and line on the timeline */
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: #e63946;
+      transform: translateX(-50%);
+    }
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      left: 20px;
+      width: 14px;
+      height: 14px;
+      background: #e63946;
+      border-radius: 50%;
+      margin-top: 0;
+      transform: translate(-50%, 0);
+    }
+
+    /* Timeline content container */
+    .timeline-content {
+      margin-left: 50px;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .timeline-content img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-content h3 {
+      margin-bottom: 0.5rem;
+      color: #e63946;
+    }
+    .timeline-content p {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+
+    /* --- Simple Fade-Up Animation --- */
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* --- Footer / Final Message --- */
+    .footer-message {
+      text-align: center;
+      margin: 3rem 0;
+      font-style: italic;
+    }
+
+    /* --- Responsive Adjustments --- */
+    @media (min-width: 768px) {
+      .timeline-item {
+        flex-direction: row;
+      }
+      .timeline-item::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .timeline-item::after {
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      .timeline-content {
+        width: 45%;
+        margin-left: 0;
+      }
+      /* Alternate side styling for timeline items */
+      .timeline-item:nth-child(even) .timeline-content {
+        float: left;
+      }
+      .timeline-item:nth-child(odd) .timeline-content {
+        float: right;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Su Šv. Valentinu Meile!</h1>
+    <p>Paruošiau tau šį mūsų istorijos laiko žemėlapį</p>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline">
+    <h2>Mūsų Istorija</h2>
+
+    <!-- Timeline Item 1 -->
+    <div class="timeline-item" data-animate>
+      <div class="timeline-content">
+        <img src="/images/grill.png" alt="First memory photo" />
+        <h3>Diena, kai mes susitikom/mūsų pirmas pasimatymas</h3>
+        <p>
+          Čia prasidėjo mūsų kelionė.<br/>
+          Tą dieną buvau pakankamai įsitempęs, kad nuoširdžiai patikėtum, kad esu autistas(esi antras žmogus, kuris taip yra manęs)
+        </p>
+      </div>
+    </div>
+
+    <!-- Timeline Item 2 -->
+    <div class="timeline-item" data-animate>
+      <div class="timeline-content">
+        <img src="/images/amberton.webp" alt="Second memory photo" />
+        <h3>Ypatingoji Diena</h3>
+        <p>
+           Čia mūsų santykiai įgavo oficialų "statusą" su klausimu "Ar būsi mano mergina?"<br/>
+           <strong>Ji pasakė taip!</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Timeline Item 3 -->
+    <div class="timeline-item" data-animate>
+      <div class="timeline-content">
+        <img src="/images/turkija.jpg" alt="Third memory photo" />
+        <h3>Įsimintiniausios atostogos</h3>
+        <p>
+          Turkijoje(pirmą kartą) buvo mūsų geriausios atostogos! Jei tau atrodo kitaip, laikas pakeisti nuomonę(Amsterdamo neliečiam).<br>
+          Čia per savaitę didžiausių karščių stipriau pažinom bei pamilom vienas kitą. Laukiu kitų mūsų tokių atostogų.
+        </p>
+      </div>
+    </div>
+
+    <!-- Timeline Item 4 -->
+    <div class="timeline-item" data-animate>
+      <div class="timeline-content">
+        <img src="images/ch.jpg" alt="Fourth memory photo" />
+        <h3>Atsitiktiniai linksmi atsiminimai</h3>
+        <p>
+          Nesvarbu ar esant namuose, ar būnant kažkur išvykus, su tavim kartu visur prikuriam linksmų prisiminimų.<br/>
+          Jų turime labai daug, bet teko kažkurį atrinkti vieną - man labiausiai įstrigęs yra šis.
+        </p>
+      </div>
+    </div>
+
+    <!-- More timeline items as needed... -->
+
+  </section>
+
+  <!-- Footer / Final Message -->
+  <section class="footer-message">
+    <p>Ačiū už visų šių prisiminimų dalijimąsį su manimi. <br/> 
+    Nekantrauju sukurti daugiau tokių prisiminimų su tavimi. <br/>
+    <strong>Labai Tave Myliu Spirgiau!<span class="heart">♥</span></strong></p>
+  </section>
+
+  <script>
+    // ---- Simple Fade-Up on Scroll Script ----
+    // This will animate elements with 'data-animate' when scrolled into view.
+    const itemsToAnimate = document.querySelectorAll("[data-animate]");
+
+    function handleScroll() {
+      const triggerBottom = window.innerHeight * 0.8;
+      
+      itemsToAnimate.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        if(itemTop < triggerBottom) {
+          // Start fadeUp animation (by removing inline styles)
+          const content = item.querySelector(".timeline-content");
+          content.style.opacity = "1";
+          content.style.transform = "translateY(0)";
+        }
+      });
+    }
+
+    // Listen for scroll event
+    window.addEventListener("scroll", handleScroll);
+    // Trigger the function on load as well
+    handleScroll();
+  </script>
+</body>
+</html>
